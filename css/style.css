@@ -21,7 +21,7 @@ body {
   color: var(--text-color);
   background-color: var(--bg-color);
   display: flex;
-  
+  height: 100vh;
 }
 
 
