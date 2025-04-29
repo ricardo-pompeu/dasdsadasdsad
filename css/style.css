@@ -33,6 +33,7 @@ border-right: 1px solid #ffffff30;
 background-color: var(--controls-bg);
 padding: 12px;
 align-content: space-between;
+height: calc(100vh - 24px);
 }
 
 .button-menu {
