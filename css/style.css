@@ -29,7 +29,6 @@ body {
 width: 420px;
 border-right: 1px solid #ffffff30;
 background-color: var(--controls-bg);
-align-content: space-between;
 height: 100vh;
 }
 
