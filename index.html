@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dynamic Network Graph Generator</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Link to your external CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="controls">
+
+        <div>
+        <div class="title-area">
+            <button class="button-menu"> <i data-lucide="menu"></i> </button>
+            <h1>Conexões</h1>
+            <button class="button-menu"> <i data-lucide="menu"></i> </button>
+        </div>
+        <div class="input-area">
+            <H2>DADASDAD </H2>
+            <textarea id="connections" rows="8" placeholder="node1 -> node2
+node2 -> node3
+node1 -> node3"></textarea>
+        </div>
+    </div>
+
+        <div class="div-button-geration">
+            <button id="generate-button">Generate / Update Graph</button>
+        </div>
+        
+    </div>
+
+    
+
+    <div id="graph-container">
+        <svg id="graph-svg"> </svg>
+
+        <div id="zoom-controls">
+        <div class="zoom1">
+            <button id="zoom-recenter" class="zoom-button" aria-label="Recenter Map"> <i data-lucide="fullscreen"></i> </button>
+        </div>
+
+        <div class="zoom2">
+            <button id="zoom-in" class="zoom-button" aria-label="Zoom In"> <i data-lucide="square-plus"></i> </button>
+            <button id="zoom-out" class="zoom-button" aria-label="Zoom Out"> <i data-lucide="square-minus"></i> </button>
+        </div>
+    </div>
+
+    <!-- D3.js Library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Link to your external JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
