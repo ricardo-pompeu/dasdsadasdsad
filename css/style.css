@@ -143,6 +143,8 @@ h2 {
   display: flex;
   justify-content: space-between;
   padding: 12px;
+  position: absolute;
+  bottom: 0;
 }
 
 .zoom1 {
