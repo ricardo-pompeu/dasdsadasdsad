@@ -140,6 +140,7 @@ h2 {
   padding: 12px;
   position: absolute;
   bottom: 0;
+  display: none;
 }
 
 .zoom1 {
