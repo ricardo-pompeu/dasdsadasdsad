@@ -133,8 +133,8 @@ h2 {
 }
 
 #graph-svg {
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: 100vh;
 }
 
 #zoom-controls {
