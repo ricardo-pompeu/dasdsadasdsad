@@ -1,0 +1,207 @@
+:root {
+  /* Professional Pastel Palette */
+  --bg-color: #101010; /* Very light cool grey */
+  --controls-bg: #2e2e2e;
+  --border-color: #e8eaf6; /* Soft lavender grey */
+  --text-color: white; /* Dark slate blue */
+  --text-light: #7f8c9a; /* Cool grey */
+  --node-stroke: #ffffff;
+  --link-color: #ced4da; /* Light grey for default links */
+  --highlight-color: #3584e4; /* Muted teal/blue for highlight */
+  --highlight-stroke: var(--highlight-color);
+  --shadow-color: rgba(44, 62, 80, 0.08); /* Softer shadow based on text color */
+  --font-family: 'Lato', sans-serif;
+  --zoom-controls-bg: #222; /* Dark background for zoom */
+  --zoom-controls-icon: #fff; /* White icons */
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  display: flex;
+  height: 100vh;
+  
+}
+
+
+#controls {
+  display: grid;
+width: 420px;
+border-right: 1px solid #ffffff30;
+background-color: var(--controls-bg);
+padding: 12px;
+align-content: space-between;
+}
+
+.button-menu {
+  background: none;
+  border: 0;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.button-menu:hover {
+  background: #ffffff10;
+}
+
+
+button {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: white;
+}
+
+.title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+h2 {
+  font-size: 0.8em;
+}
+
+#controls .input-area {
+    display: grid;
+    margin-top: 2em;
+}
+
+#controls label {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: var(--text-light);
+    margin: 0;
+}
+
+#connections {
+    padding: 12px;
+    border: 0;
+    border-radius: 6px;
+    font-family: Consolas, 'Courier New', monospace; /* Better for code-like input */
+    line-height: 1.4;
+    background-color: #414141;
+    color: var(--text-color);
+    resize: vertical;
+    margin: 0;
+}
+
+#connections:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--highlight-color) 80%, black);
+}
+
+#connections::placeholder {
+    color: #adb5bd;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.div-button-geration {
+  display: flex;
+  justify-content: center;
+}
+
+
+#generate-button {
+  background-color: var(--highlight-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  border-radius: 4em;
+  height: 48px;
+  padding: 12px 42px;
+  font-size: 1em;
+}
+
+#generate-button:hover {
+    background-color: #4a8891; /* Slightly darker highlight */
+    box-shadow: 0 2px 4px rgba(44, 62, 80, 0.1);
+}
+
+
+#graph-container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+
+#graph-svg {
+  width: 100%;
+  height: 100%;
+}
+
+#zoom-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.zoom1 {
+  display: flex;
+}
+
+.zoom2 {
+  display: flex;
+  gap: 6px;
+}
+
+
+#zoom-recenter {
+  align-items: center;
+  justify-content: center;
+}
+
+.zoom-button {
+background-color: #ffffff10;
+color: var(--zoom-controls-icon);
+border: none;
+padding: 12px;
+cursor: pointer;
+display: flex;
+border-radius: 50%;
+cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* --- Graph Elements --- */
+.nodes circle { cursor: pointer; stroke-width: 2px; stroke: var(--node-stroke); transition: opacity 0.3s ease, r 0.3s ease, stroke 0.3s ease, stroke-width 0.3s ease, fill 0.3s ease; }
+.nodes circle.highlighted { stroke: var(--highlight-stroke); stroke-width: 3px; }
+.links line { stroke: var(--link-color); stroke-opacity: 0.4; stroke-width: 1px; transition: opacity 0.3s ease, stroke 0.3s ease, stroke-opacity 0.3s ease, stroke-width 0.3s ease; }
+.links line.highlighted { stroke: var(--highlight-color); stroke-opacity: 0.9; stroke-width: 2px; }
+#arrow path { fill: var(--link-color); transition: fill 0.3s ease; }
+#arrow-highlight path { fill: var(--highlight-color); transition: fill 0.3s ease; }
+.node-label {
+  font-size: 10.5px;
+  font-weight: 400;
+  font-family: var(--font-family);
+  fill: var(--text-color);
+  pointer-events: none;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+  paint-order: stroke;
+  stroke: var(--bg-color);
+  stroke-width: 2.5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  text-anchor: start;
+}
+.faded { opacity: 0.08 !important; }
+.node-label.faded-label { opacity: 0.15 !important; }
+
+/* --- Zoom Controls --- */
+
