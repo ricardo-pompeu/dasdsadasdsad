@@ -21,7 +21,6 @@ body {
   color: var(--text-color);
   background-color: var(--bg-color);
   display: flex;
-  height: 100vh;
 }
 
 
@@ -30,9 +29,8 @@ body {
 width: 420px;
 border-right: 1px solid #ffffff30;
 background-color: var(--controls-bg);
-padding: 12px;
 align-content: space-between;
-height: calc(100vh - 24px);
+height: 100vh;
 }
 
 .button-menu {
